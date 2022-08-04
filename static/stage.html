@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Stage viewer</title>
+  <meta name="description" content="Aereum Newtork.">
+  <meta name="author" content="Aereum Authors.">
+
+  <meta property="og:title" content="Aereum">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Crypto network for human-to-human interaction.">
+  
+  <link rel="stylesheet" href="css/style_stgviewer_desk.css">
+</head>
+
+<body>
+  <div class="container_main">
+    <div class="menu">
+      <div class="container_menu">
+        <div>
+          <h1>
+            onboarding
+          </h1>
+        </div>
+        <div>
+          <h1>
+            stages
+          </h1>
+          <div id="stages"></div>
+          
+        </div>
+        <div>
+          <h1>
+            people
+          </h1>
+          <div id="people"></div>
+        </div><div>
+        </div><div>
+        </div><div>
+        </div><div>
+        </div>
+        <div>
+          <h1>
+            backstage
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="board">
+      <div class="container_board">
+        <div class="board_header">
+          <h1 id="stage_title">
+            larissa's onboarding
+          </h1>
+          <h2 id="stage_last_update">
+            last message 2 minutes ago
+          </h2>
+        </div>
+        <div class="board_content" id="message_board">
+        </div>
+        <div class="board_poster">
+          <div class="container_board_poster">
+            <div class="user_message">
+              <h1>
+                larissa:
+              </h1>
+            </div>
+            <div class="send_button" onclick="window.location.href='stage_viewer.html'">
+              SEND
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="stage_info" class="details">
+      <h1>
+        stage info
+      </h1>
+      <h2>
+        <b>Owner</b> 
+      </h2>
+      <div id="stage_owner"></div>
+      <h2>
+        <b>Moderator</b> 
+      </h2>
+      <div id="stage_moderators">
+      </div>
+      <h2>
+        <b>access:</b> public
+      </h2>
+    </div>
+  </div>
+</div>
+<script src="js/socket.js"></script>
+</body>
+</html> 
