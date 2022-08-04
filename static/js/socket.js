@@ -124,9 +124,8 @@ function appendElementsWithContentAndTokenOnId(id, tag, obj) {
 
 function presentStage(msg) {
   setContentAndTokenOnId("stage_title", msg.stage)
-
-  appendElementWithContentAndTokenOnId("stage_owner", "span", msg.owner)
-  appendElementsWithContentAndTokenOnId("stage_moderators", "h2", msg.moderators)
+  appendElementWithContentAndTokenOnId("stage_owner", "p", msg.owner)
+  appendElementsWithContentAndTokenOnId("stage_moderators", "p", msg.moderators)
   document.getElementById("message_board").innerHTML = ""
   for (let post of msg.content) {
       createContent(post, post.author.name !== msg.onboarding)
@@ -142,6 +141,7 @@ function createContent(post, other) {
   setContentAndToken(name, post.author)
   postElement.appendChild(name)
   const content = document.createElement("div")
+  content.setAttribute('class', 'postContent')
   content.innerHTML = post.html
   postElement.appendChild(content)
   const boardElement = document.getElementById("message_board")
